@@ -1,0 +1,1 @@
+exports.ZoomableCanvasComponent = require('./lib/zoomablecanvas.component').ZoomableCanvasComponent;

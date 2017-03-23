@@ -1,0 +1,18 @@
+{
+  "name": "@durwella/zoomable-canvas",
+  "version": "1.0.0",
+  "description": "An Angular 2 component allowing panning and zooming an image in a canvas element",
+  "main": "index.js",
+  "dependencies": {
+    "@angular/core": "^2.4.10",
+    "zone.js": "^0.8.5"
+  },
+  "devDependencies": {
+    "typescript": "^1.7.5"
+  },
+  "scripts": {
+    "build": "rm -rf lib && tsc -p src"
+  },
+  "author": "Neal Miller <neal.miller@durwella.com>",
+  "license": "MIT"
+}
