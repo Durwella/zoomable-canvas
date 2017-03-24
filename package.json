@@ -1,6 +1,6 @@
 {
   "name": "@durwella/zoomable-canvas",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An Angular 2 component allowing panning and zooming an image in a canvas element",
   "main": "index.js",
   "dependencies": {
