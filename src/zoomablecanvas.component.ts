@@ -75,8 +75,14 @@ export class ZoomableCanvasComponent implements AfterViewInit {
         if (this.zoomLevel == undefined) this.zoomLevel = 0;
         if (this.minZoom == undefined) this.minZoom = 0;
 
-        if (!this.centerX && this.centerX != 0) this.setCenterX(this.image.width / 2, false);
-        if (!this.centerY && this.centerY != 0) this.setCenterY(this.image.height / 2, false);
+        // If the center is at (0,0) or undefined, move it to the center
+        if (!this.centerX && !this.centerY) {
+            this.setCenterX(this.image.width / 2, false);
+            this.setCenterY(this.image.height / 2, false);
+        } else {
+            if (!this.centerX && this.centerX != 0) this.setCenterX(this.image.width / 2, false);
+            if (!this.centerY && this.centerY != 0) this.setCenterY(this.image.height / 2, false);
+        }
 
         this.draw({ x: this.centerX, y: this.centerY }, 1);
 

@@ -1,0 +1,20 @@
+.canvas-container {
+  border: 1px solid black;
+  padding: 0px;
+}
+:host >>> canvas {
+  margin-bottom: -5px;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 30px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 30px;
+  background-color: #f5f5f5;
+  padding-top: 6px;
+}

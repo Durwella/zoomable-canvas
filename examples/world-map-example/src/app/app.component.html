@@ -1,0 +1,30 @@
+<a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+
+<div class="container">
+  <h1>@durwella/zoomable-canvas Example</h1>
+
+  An example of the <a href="https://www.npmjs.com/package/@durwella/zoomable-canvas">@durwella/zoomable-canvas</a> Angular 2 component.
+  Drag to pan and use your mouse scroll wheel or the slider below to zoom.
+  <div class="canvas-container">
+    <zoomable-canvas 
+      [image]="image"
+      (topChange)="top = $event" (bottomChange)="bottom = $event" 
+      (leftChange)="left = $event" (rightChange)="right = $event"
+      [(centerX)]="centerX" [(centerY)]="centerY"
+      [(zoomLevel)]="zoomLevel" [maxZoom]="maxZoom" [minZoom]="0"
+      (canvasWidthChange)="canvasWidth = $event" (canvasHeightChange)="canvasHeight = $event"
+    ></zoomable-canvas>
+  </div>
+  <br />
+  <input type="range" min="0" step="0.05" max="{{ maxZoom }}" [(ngModel)]="zoomLevel"><br />
+  <b>Zoom Level:</b> {{ zoomLevel | number:'1.2-2' }}<br />
+  <b>Center:</b> ({{ centerX | number:'1.0-0' }}, {{ centerY | number:'1.0-0' }})<br />
+  <b>Canvas dimensions:</b> {{  canvasWidth }} x {{ canvasHeight }}<br />
+  <b>Image bounds:</b> ({{ left | number:'1.0-0' }}; {{ top | number:'1.0-0' }}; {{ right | number:'1.0-0' }}; {{ bottom | number:'1.0-0' }})
+</div>
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted align-right"><a href="https://commons.wikimedia.org/wiki/Category:Blank_SVG_maps_of_the_world#/media/File:A_large_blank_world_map_with_oceans_marked_in_blue_planisferio_en_blanco.svg">World map</a>
+         used unmodified from Gustavo Giardell and licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></p>
+    </div>
+</footer>

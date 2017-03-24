@@ -4,7 +4,7 @@
 
 A `<canvas>` element hosting an `HtmlImageElement` which can be panned and zoomed using the mouse.
 
-This component also provides two-way bindings for panning and zooming programmatically.
+This component also provides two-way bindings for panning and zooming programmatically.  For an example of the component in action, see the [example page](https://durwella.github.io/zoomable-canvas/).
 
 ## Install
 
