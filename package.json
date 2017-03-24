@@ -13,6 +13,10 @@
   "scripts": {
     "build": "rm -rf lib && tsc -p src"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Durwella/zoomable-canvas.git"
+  },
   "author": "Neal Miller <neal.miller@durwella.com>",
   "license": "MIT"
 }

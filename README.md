@@ -35,7 +35,9 @@ Include the components in your app:
 ```html
 <zoomable-canvas 
     [image]="image"
-    [(top)]="top" [(bottom)]="bottom" [(left)]="left" [(right)]="right"
+    (topChange)="top = $event" (bottomChange)="bottom = $event" 
+    (leftChange)="left = $event" (rightChange)="right = $event"
+    [(centerX)]="centerX" [(centerY)]="centerY"
     [(zoomLevel)]="zoomLevel" [maxZoom]="maxZoom" [minZoom]="0"
     (canvasWidthChange)="canvasWidth = $event" (canvasHeightChange)="canvasHeight = $event"
 ></zoomable-canvas>
@@ -45,4 +47,4 @@ Include the components in your app:
 Pull requests accepted.
 
 ## License
-MIT © Durwella LLC 2017
+[MIT © Durwella LLC 2017](https://raw.githubusercontent.com/Durwella/zoomable-canvas/master/LICENSE)
