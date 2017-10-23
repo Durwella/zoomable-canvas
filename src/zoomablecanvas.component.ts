@@ -262,11 +262,11 @@ export class ZoomableCanvasComponent implements AfterViewInit {
         this.draw({ x: this.centerX, y: this.centerY }, newZoomRatio);
     }
 
-    private mousedown(event : MouseEvent) {
+    public mousedown(event : MouseEvent) {
         this.dragPos = { x: event.offsetX, y: event.offsetY };
     }
 
-    private mousemove(event : MouseEvent) {
+    public mousemove(event : MouseEvent) {
         if (event.buttons > 0) {
             if (this.dragPos == null) this.dragPos = { x: event.offsetX, y: event.offsetY };
 
@@ -283,7 +283,7 @@ export class ZoomableCanvasComponent implements AfterViewInit {
         }
     }
 
-    private mousewheel(event: WheelEvent) {
+    public mousewheel(event: WheelEvent) {
         event.preventDefault();
 
         var previousZoomLevel = this.zoomLevelValue;
@@ -298,7 +298,7 @@ export class ZoomableCanvasComponent implements AfterViewInit {
         this.zoomLevelChange.emit(newZoomLevel);
     }
 
-    private onresize() {
+    public onresize() {
         this.canvasWidthChange.emit(this.canvas.scrollWidth);
         this.canvasHeightChange.emit(this.canvas.scrollHeight);
     }
